@@ -87,7 +87,7 @@ public class Recycler_View2 extends Fragment {
         ArrayList<Serie> favoritos = new ArrayList<>();
         for (int i = 0; i<series.size();i++){
             if (series.get(i).isFavoris() == true){
-                favoritos.add( new Serie(series.get(i).getName(),series.get(i).getCaps(),series.get(i).getImg(),series.get(i).getDesc(),series.get(i).isFavoris()));
+                favoritos.add( new Serie(series.get(i).getName(),series.get(i).getCaps(),series.get(i).getDesc(),series.get(i).getImg(),series.get(i).isFavoris()));
             }
         }
 
@@ -99,7 +99,7 @@ public class Recycler_View2 extends Fragment {
         ArrayList<Serie> favseries = new ArrayList<>();
         for (int i = 0; i<series.size();i++){
             if (series.get(i).isFavoris() == true){
-                favseries.add( new Serie(series.get(i).getName(),series.get(i).getCaps(),series.get(i).getImg(),series.get(i).getDesc(),series.get(i).isFavoris()));
+                favoritos.add( new Serie(series.get(i).getName(),series.get(i).getCaps(),series.get(i).getDesc(),series.get(i).getImg(),series.get(i).isFavoris()));
                 adapter.notifyDataSetChanged();
             }
         }
