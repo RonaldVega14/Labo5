@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public void prepareSeries(){
         String TAG ="mensaje";
         series = new ArrayList<>();
-        series.add(new Serie("The Walking death", "13", "Show created by Robert Kirgman" , R.drawable.twd, false));
+        series.add(new Serie("The Walking dead", "13", "Show created by Robert Kirgman" , R.drawable.twd, false));
         series.add(new Serie("Vikings", "13", "Show created by Michael Hirst", R.drawable.vik, false));
         series.add(new Serie("Game of thrones", "13", "Show created by Geaorge R. Martin",R.drawable.got, false));
 
