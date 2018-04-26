@@ -65,6 +65,7 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
                         holder.btn.setImageResource(R.drawable.star_empty);
                         holder.fav = false;
                     }
+                    rv1.update(series,position, holder.fav);
                 }
 
                 rv2.update(series);
@@ -84,20 +85,20 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.SeriesView
         ImageView btn;
         boolean fav;
 
-        public SeriesViewHolder(View itemView, boolean Favoris) {
+        public SeriesViewHolder(View itemView, boolean Favoritos) {
             super(itemView);
             card=itemView.findViewById(R.id.card_view);
             name=itemView.findViewById(R.id.name);
             img=itemView.findViewById(R.id.img);
             btn = itemView.findViewById(R.id.btn);
-            fav = Favoris;
+            fav = Favoritos;
         }
 
     }
 
-    public SeriesAdapter(ArrayList<Serie> series, Context contexte, Boolean favoris) {
+    public SeriesAdapter(ArrayList<Serie> series, Context contexto, Boolean favoritos) {
         this.series = series;
-        this.contexto = contexte;
-        this.favoritos = favoris;
+        this.contexto = contexto;
+        this.favoritos = favoritos;
     }
 }

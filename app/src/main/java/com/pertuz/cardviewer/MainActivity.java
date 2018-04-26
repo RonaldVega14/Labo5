@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity {
         Bundle bungalo= new Bundle();
         bungalo.putParcelableArrayList("KEY",series);
 
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

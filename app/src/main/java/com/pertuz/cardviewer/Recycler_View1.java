@@ -47,8 +47,8 @@ public class Recycler_View1 extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View viewy = inflater.inflate(R.layout.recyclerviewf1, container, false);
-        return viewy;
+        View views = inflater.inflate(R.layout.recyclerviewf1, container, false);
+        return views;
     }
 
     @Override
@@ -71,9 +71,14 @@ public class Recycler_View1 extends Fragment{
         return rv1;
     }
 
-    public void update(ArrayList<Serie> serieees){
-        Log.d("LifeCycle", "On Update");
-        series = serieees;
+    public void update(ArrayList<Serie> serieees, int position, Boolean fav) {
+        Log.d("LifeCycle", "Fragmento 1... ");
+        for (int i=0;i<series.size();i++){
+            if(series.get(i).getName().equals(serieees.get(position).getName())){
+                series.get(i).setFavoritos(fav);
+                Log.d("LifeCycle Update", series.get(i).getName());
+            }
+        }
         adapter = new SeriesAdapter(series, this.getContext(),false);
         rv.setAdapter(adapter);
     }
